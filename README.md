@@ -1,4 +1,4 @@
 # My Portfolio
 
 ### Hosted On
-[![Render](https://img.shields.io/badge/Render-%46E3B7.svg?logo=render&logoColor=white)](https://haolam05.haolam.codes/)
+[![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?logo=netlify&logoColor=#00C7B7)](https://haolam05.haolam.codes/)
