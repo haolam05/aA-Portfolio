@@ -21,7 +21,7 @@ $sender = $conName . " { " . $conEmail . " }";
 
 
 //Email Header
-$head = "You have a new message from your Gerold website Contact Form\n=============================";
+$head = "You have a new message from your Hao Tuong Lam website Contact Form\n=============================";
 
 // Build the email content.
 $form_content = "$head\n\n";
