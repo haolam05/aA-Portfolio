@@ -1329,6 +1329,7 @@ body.loaded {
 	border-radius: 60px;
 	padding: 6px 8px;
 	display: inline-block;
+	width: fit-content;
 }
 
 .portfolio-filter .button-group button {
