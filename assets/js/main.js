@@ -35,8 +35,8 @@ Description: Gerold - Personal Portfolio HTML5 Template
 	"use strict";
 
 	/*------------------------------------------------------
-  /  Data js
-  /------------------------------------------------------*/
+	/  Data js
+	/------------------------------------------------------*/
 	$("[data-bg-image]").each(function () {
 		$(this).css(
 			"background-image",
@@ -50,8 +50,8 @@ Description: Gerold - Personal Portfolio HTML5 Template
 
 	$(document).ready(function ($) {
 		/*------------------------------------------------------
-  	/  Sticky Header
-  	/------------------------------------------------------*/
+		/  Sticky Header
+		/------------------------------------------------------*/
 		var lastScrollTop = 0;
 		$(window).scroll(function () {
 			var scroll = $(window).scrollTop();
@@ -72,8 +72,8 @@ Description: Gerold - Personal Portfolio HTML5 Template
 		});
 
 		/*------------------------------------------------------
-  	/  Hamburger Menu
-  	/------------------------------------------------------*/
+		/  Hamburger Menu
+		/------------------------------------------------------*/
 		$(".menu-bar").on("click", function () {
 			$(".menu-bar").toggleClass("menu-bar-toggeled");
 			$(".header-menu").toggleClass("opened");
@@ -87,8 +87,8 @@ Description: Gerold - Personal Portfolio HTML5 Template
 		});
 
 		/*------------------------------------------------------
-  	/  OnePage Active Class
-  	/------------------------------------------------------*/
+		/  OnePage Active Class
+		/------------------------------------------------------*/
 		$(".header-menu nav ul").onePageNav({
 			currentClass: "current-menu-ancestor",
 			changeHash: false,
@@ -96,8 +96,8 @@ Description: Gerold - Personal Portfolio HTML5 Template
 		});
 
 		/*------------------------------------------------------
-  	/  Portfolio Filter
-  	/------------------------------------------------------*/
+		/  Portfolio Filter
+		/------------------------------------------------------*/
 		var $grid = $(".portfolio-box").isotope({
 			// options
 			masonry: {
@@ -118,8 +118,8 @@ Description: Gerold - Personal Portfolio HTML5 Template
 		});
 
 		/*------------------------------------------------------
-  	/  Portfolio Gallery Carousel
-  	/------------------------------------------------------*/
+		/  Portfolio Gallery Carousel
+		/------------------------------------------------------*/
 		$(".portfolio_gallery.owl-carousel").owlCarousel({
 			items: 2,
 			loop: true,
@@ -152,8 +152,8 @@ Description: Gerold - Personal Portfolio HTML5 Template
 		});
 
 		/*------------------------------------------------------
-  	/ Testimonial Carousel
-  	/------------------------------------------------------*/
+		/ Testimonial Carousel
+		/------------------------------------------------------*/
 		$(".testimonial-carousel.owl-carousel").owlCarousel({
 			loop: true,
 			margin: 30,
@@ -177,8 +177,8 @@ Description: Gerold - Personal Portfolio HTML5 Template
 		});
 
 		/*------------------------------------------------------
-  	/ Post Gallery Carousel
-  	/------------------------------------------------------*/
+		/ Post Gallery Carousel
+		/------------------------------------------------------*/
 		$(".tj-post__gallery.owl-carousel").owlCarousel({
 			items: 1,
 			loop: true,
@@ -195,13 +195,13 @@ Description: Gerold - Personal Portfolio HTML5 Template
 		});
 
 		/*------------------------------------------------------
-  	/  Nice Select
-  	/------------------------------------------------------*/
+		/  Nice Select
+		/------------------------------------------------------*/
 		$("select").niceSelect();
 
 		/*------------------------------------------------------
-  	/  ALL Popup
-  	/------------------------------------------------------*/
+		/  ALL Popup
+		/------------------------------------------------------*/
 		if ($(".popup_video").length > 0) {
 			$(`.popup_video`).lightcase({
 				transition: "elastic",
@@ -229,8 +229,8 @@ Description: Gerold - Personal Portfolio HTML5 Template
 
 	$(window).on("load", function () {
 		/*------------------------------------------------------
-  	/  WoW Js
-  	/------------------------------------------------------*/
+		/  WoW Js
+		/------------------------------------------------------*/
 		var wow = new WOW({
 			boxClass: "wow", // default
 			animateClass: "animated", // default
@@ -241,8 +241,8 @@ Description: Gerold - Personal Portfolio HTML5 Template
 		wow.init();
 
 		/*------------------------------------------------------
-  	/  Preloader
-  	/------------------------------------------------------*/
+		/  Preloader
+		/------------------------------------------------------*/
 		const svg = document.getElementById("preloaderSvg");
 		const svgText = document.querySelector(
 			".hero-section .intro_text svg text"
@@ -281,8 +281,8 @@ Description: Gerold - Personal Portfolio HTML5 Template
 		}
 
 		/*------------------------------------------------------
-  	/  Services Hover BG
-  	/------------------------------------------------------*/
+		/  Services Hover BG
+		/------------------------------------------------------*/
 		function service_animation() {
 			var active_bg = $(".services-widget .active-bg");
 			var element = $(".services-widget .current");
@@ -317,8 +317,8 @@ Description: Gerold - Personal Portfolio HTML5 Template
 		});
 
 		/*------------------------------------------------------
-  	/  Portfolio Filter BG Color
-  	/------------------------------------------------------*/
+		/  Portfolio Filter BG Color
+		/------------------------------------------------------*/
 		function filter_animation() {
 			var active_bg = $(".portfolio-filter .button-group .active-bg");
 			var element = $(".portfolio-filter .button-group .active");
@@ -345,8 +345,8 @@ Description: Gerold - Personal Portfolio HTML5 Template
 		}
 
 		/*------------------------------------------------------
-  	/  Funfact
-  	/------------------------------------------------------*/
+		/  Funfact
+		/------------------------------------------------------*/
 		if ($(".odometer").length > 0) {
 			$(".odometer").appear(function () {
 				var odo = $(".odometer");

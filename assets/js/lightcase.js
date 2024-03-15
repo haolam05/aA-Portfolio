@@ -8,7 +8,7 @@
  * @version		2.5.0 (11/03/2018)
  */
 
-;(function ($) {
+; (function ($) {
 
 	'use strict';
 
@@ -134,7 +134,7 @@
 					'close': 'Close',
 					'navigator.prev': 'Prev',
 					'navigator.next': 'Next',
- 					'navigator.play': 'Play',
+					'navigator.play': 'Play',
 					'navigator.pause': 'Pause'
 				},
 				markup: function () {
@@ -176,9 +176,9 @@
 				onClose: {},
 				onCleanup: {}
 			},
-			options,
-			// Load options from data-lc-options attribute
-			_self.origin.data ? _self.origin.data('lc-options') : {});
+				options,
+				// Load options from data-lc-options attribute
+				_self.origin.data ? _self.origin.data('lc-options') : {});
 
 			_self.objects.document = $('html');
 			_self.objects.body = $('body');
@@ -220,22 +220,22 @@
 		 * @return	{object}	objectData
 		 */
 		_setObjectData: function (object) {
-		 	var $object = $(object),
+			var $object = $(object),
 				objectData = {
-				this: $(object),
-				title: _self.settings.title || $object.attr(_self._prefixAttributeName('title')) || $object.attr('title'),
-				caption: _self.settings.caption || $object.attr(_self._prefixAttributeName('caption')) || $object.children('img').attr('alt'),
-				url: _self._determineUrl(),
-				requestType: _self.settings.ajax.type,
-				requestData: _self.settings.ajax.data,
-				requestDataType: _self.settings.ajax.dataType,
-				rel: $object.attr(_self._determineAttributeSelector()),
-				type: _self.settings.type || _self._verifyDataType(_self._determineUrl()),
-				isPartOfSequence: _self.settings.useAsCollection || _self._isPartOfSequence($object.attr(_self.settings.attr), ':'),
-				isPartOfSequenceWithSlideshow: _self._isPartOfSequence($object.attr(_self.settings.attr), ':slideshow'),
-				currentIndex: $(_self._determineAttributeSelector()).index($object),
-				sequenceLength: $(_self._determineAttributeSelector()).length
-			};
+					this: $(object),
+					title: _self.settings.title || $object.attr(_self._prefixAttributeName('title')) || $object.attr('title'),
+					caption: _self.settings.caption || $object.attr(_self._prefixAttributeName('caption')) || $object.children('img').attr('alt'),
+					url: _self._determineUrl(),
+					requestType: _self.settings.ajax.type,
+					requestData: _self.settings.ajax.data,
+					requestDataType: _self.settings.ajax.dataType,
+					rel: $object.attr(_self._determineAttributeSelector()),
+					type: _self.settings.type || _self._verifyDataType(_self._determineUrl()),
+					isPartOfSequence: _self.settings.useAsCollection || _self._isPartOfSequence($object.attr(_self.settings.attr), ':'),
+					isPartOfSequenceWithSlideshow: _self._isPartOfSequence($object.attr(_self.settings.attr), ':slideshow'),
+					currentIndex: $(_self._determineAttributeSelector()).index($object),
+					sequenceLength: $(_self._determineAttributeSelector()).length
+				};
 
 			// Add sequence info to objectData
 			objectData.sequenceInfo = (objectData.currentIndex + 1) + _self.settings.labels['sequenceInfo.of'] + objectData.sequenceLength;
@@ -275,13 +275,13 @@
 		 * @return	{string}	selector
 		 */
 		_determineAttributeSelector: function () {
-			var	$origin = $(_self.origin),
+			var $origin = $(_self.origin),
 				selector = '';
 
 			if (typeof _self.cache.selector !== 'undefined') {
 				selector = _self.cache.selector;
 			} else if (_self.settings.useCategories === true && $origin.attr(_self._prefixAttributeName('categories'))) {
-				var	categories = $origin.attr(_self._prefixAttributeName('categories')).split(' ');
+				var categories = $origin.attr(_self._prefixAttributeName('categories')).split(' ');
 
 				$.each(categories, function (index, category) {
 					if (index > 0) {
@@ -305,7 +305,7 @@
 		 * @return	{string}	url
 		 */
 		_determineUrl: function () {
-			var	dataUrl = _self._verifyDataUrl(_self._determineLinkTarget()),
+			var dataUrl = _self._verifyDataUrl(_self._determineLinkTarget()),
 				width = 0,
 				density = 0,
 				supportLevel = '',
@@ -314,7 +314,7 @@
 			$.each(dataUrl, function (index, src) {
 				switch (_self._verifyDataType(src.url)) {
 					case 'video':
-						var	video = document.createElement('video'),
+						var video = document.createElement('video'),
 							videoType = _self._verifyDataType(src.url) + '/' + _self._getFileUrlSuffix(src.url);
 
 						// Check if browser can play this type of video format
@@ -579,7 +579,7 @@
 					_self._showContent($object);
 					break;
 				case 'video':
-					if (typeof($object.get(0).canPlayType) === 'function' || _self.objects.case.find('video').length === 0) {
+					if (typeof ($object.get(0).canPlayType) === 'function' || _self.objects.case.find('video').length === 0) {
 						_self._showContent($object);
 					} else {
 						_self.error();
@@ -798,7 +798,7 @@
 			return _self._normalizeUrl(dataUrl.toString());
 		},
 
-			//
+		//
 		/**
 		 * Tries to get the (file) suffix of an url
 		 *
@@ -897,7 +897,7 @@
 					if (_self.objects.case.css('opacity') < 1) {
 						_self.transition.zoom(_self.objects.case, 'in', _self.settings.speedIn);
 						_self.transition.fade(_self.objects.contentInner, 'in', _self.settings.speedIn);
-				}
+					}
 				case 'fade':
 				case 'fadeInline':
 					_self.transition.fade(_self.objects.case, 'in', _self.settings.speedIn);
@@ -920,7 +920,7 @@
 			// Fade in the info with delay
 			_self.objects.info.hide();
 			setTimeout(function () {
-				 _self.transition.fade(_self.objects.info, 'in', _self.settings.speedIn);
+				_self.transition.fade(_self.objects.info, 'in', _self.settings.speedIn);
 			}, _self.settings.speedIn);
 
 			// Call onFinish hook functions
@@ -1321,7 +1321,7 @@
 					startTransition = {},
 					startOpacity = $object.css('opacity'),
 					endTransition = {},
-					endOpacity = opacity ? opacity: isInTransition ? 1 : 0;
+					endOpacity = opacity ? opacity : isInTransition ? 1 : 0;
 
 				if (!_self.isOpen && isInTransition) return;
 
@@ -1503,9 +1503,9 @@
 		 * @return	{void}
 		 */
 		_callHooks: function (hooks) {
-			if (typeof(hooks) === 'object') {
-				$.each(hooks, function(index, hook) {
-					if (typeof(hook) === 'function') {
+			if (typeof (hooks) === 'object') {
+				$.each(hooks, function (index, hook) {
+					if (typeof (hook) === 'function') {
 						hook.call(_self.origin);
 					}
 				});
